@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../../logic/controller/auth_controller.dart';
 import '../../../routes/routes.dart';
+import '../../../utils/my_string.dart';
 import '../../../utils/theme.dart';
 import '../../widgets/auth/auth_button.dart';
 import '../../widgets/auth/auth_text_from_field.dart';
@@ -23,7 +24,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: context.theme.backgroundColor,
+        backgroundColor: context.theme.scaffoldBackgroundColor,
         appBar: AppBar(
           backgroundColor: Get.isDarkMode ? darkGreyClr : Colors.white,
           elevation: 0,
@@ -72,7 +73,7 @@ class LoginScreen extends StatelessWidget {
                           controller: emailController,
                           obscureText: false,
                           validator: (value) {
-                            if (!RegExp('emailController').hasMatch(value)) {
+                            if (!RegExp(validationEmail).hasMatch(value)) {
                               return 'Invalid email';
                             } else {
                               return null;

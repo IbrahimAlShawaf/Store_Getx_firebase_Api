@@ -12,7 +12,7 @@ class CheckWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AuthController>(builder: (_) {
+    return GetBuilder(builder: (_) {
       return Row(
         children: [
           InkWell(

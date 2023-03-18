@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "929087798258",
+    "project_id": "store-firebase-getx",
+    "storage_bucket": "store-firebase-getx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929087798258:android:2d283dec14d846ef50096b",
+        "android_client_info": {
+          "package_name": "com.borhom.storefinal_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929087798258-v8t6an25rsp8noicqjflkj6ceg63qjgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3gbBHCNBOPMP8JjAPqREIKD6wFmC0blU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929087798258-v8t6an25rsp8noicqjflkj6ceg63qjgu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

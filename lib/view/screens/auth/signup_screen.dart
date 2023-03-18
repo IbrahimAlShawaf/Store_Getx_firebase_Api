@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../../logic/controller/auth_controller.dart';
 import '../../../routes/routes.dart';
+import '../../../utils/my_string.dart';
 import '../../../utils/theme.dart';
 import '../../widgets/auth/auth_button.dart';
 import '../../widgets/auth/auth_text_from_field.dart';
@@ -11,7 +12,7 @@ import '../../widgets/auth/container_under.dart';
 import '../../widgets/text_utils.dart';
 
 class SignUpScreen extends StatelessWidget {
-   SignUpScreen({super.key});
+  SignUpScreen({super.key});
 
   final fromKey = GlobalKey<FormState>();
 
@@ -29,7 +30,7 @@ class SignUpScreen extends StatelessWidget {
           backgroundColor: Get.isDarkMode ? darkGreyClr : Colors.white,
           elevation: 0,
         ),
-        backgroundColor: context.theme.backgroundColor,
+        backgroundColor: context.theme.scaffoldBackgroundColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -37,7 +38,7 @@ class SignUpScreen extends StatelessWidget {
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height / 1.3,
                 child: Padding(
-                  padding: EdgeInsets.only(left: 25, right: 25, top: 40),
+                  padding: const EdgeInsets.only(left: 25, right: 25, top: 40),
                   child: Form(
                     key: fromKey,
                     child: Column(
@@ -72,7 +73,7 @@ class SignUpScreen extends StatelessWidget {
                           obscureText: false,
                           validator: (value) {
                             if (value.toString().length <= 2 ||
-                                !RegExp('validationName').hasMatch(value)) {
+                                !RegExp(validationName).hasMatch(value)) {
                               return 'Enter valid name';
                             } else {
                               return null;
@@ -95,7 +96,7 @@ class SignUpScreen extends StatelessWidget {
                           controller: emailController,
                           obscureText: false,
                           validator: (value) {
-                            if (!RegExp('validationEmail').hasMatch(value)) {
+                            if (!RegExp(validationEmail).hasMatch(value)) {
                               return 'Invalid email';
                             } else {
                               return null;
@@ -137,7 +138,7 @@ class SignUpScreen extends StatelessWidget {
                               hintText: 'Password',
                               suffixIcon: IconButton(
                                 onPressed: () {
-                                  controller.visibility();
+                                   controller.visibility();
                                 },
                                 icon: controller.isVisibilty
                                     ? const Icon(
@@ -163,26 +164,26 @@ class SignUpScreen extends StatelessWidget {
                           builder: (_) {
                             return AuthButton(
                               onPressed: () {
-                                if (controller.isCheckBox == false) {
-                                  Get.snackbar(
-                                    "Check Box",
-                                    "Please, Accept terms & conditions",
-                                    snackPosition: SnackPosition.BOTTOM,
-                                    backgroundColor: Colors.green,
-                                    colorText: Colors.white,
-                                  );
-                                } else if (fromKey.currentState!.validate()) {
-                                  String name = nameController.text.trim();
-                                  String email = emailController.text.trim();
-                                  String password = passwordController.text;
-                                  // controller.signUpUsingFirebase(
-                                  //   name: name,
-                                  //   email: email,
-                                  //   password: password,
-                                  // );
+                                // if (controller.isCheckBox == false) {
+                                //   Get.snackbar(
+                                //     "Check Box",
+                                //     "Please, Accept terms & conditions",
+                                //     snackPosition: SnackPosition.BOTTOM,
+                                //     backgroundColor: Colors.green,
+                                //     colorText: Colors.white,
+                                //   );
+                                // } else if (fromKey.currentState!.validate()) {
+                                //   String name = nameController.text.trim();
+                                //   String email = emailController.text.trim();
+                                //   String password = passwordController.text;
+                                //   // controller.signUpUsingFirebase(
+                                //   //   name: name,
+                                //   //   email: email,
+                                //   //   password: password,
+                                //   // );
 
-                                  controller.isCheckBox = true;
-                                }
+                                //   controller.isCheckBox = true;
+                                // }
                               },
                               text: "SIGN UP",
                             );
@@ -207,5 +208,3 @@ class SignUpScreen extends StatelessWidget {
     );
   }
 }
-  
-

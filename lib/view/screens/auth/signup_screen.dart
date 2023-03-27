@@ -120,7 +120,7 @@ class SignUpScreen extends StatelessWidget {
                             return AuthTextFromField(
                               controller: passwordController,
                               obscureText:
-                                  controller.isVisibilty ? false : true,
+                                  controller.isVisibilty.value ? false : true,
                               validator: (value) {
                                 if (value.toString().length < 6) {
                                   return 'Password should be longer or equal to 6 characters';
@@ -138,9 +138,9 @@ class SignUpScreen extends StatelessWidget {
                               hintText: 'Password',
                               suffixIcon: IconButton(
                                 onPressed: () {
-                                   controller.visibility();
+                                  controller.visibility();
                                 },
-                                icon: controller.isVisibilty
+                                icon: controller.isVisibilty.value
                                     ? const Icon(
                                         Icons.visibility_off,
                                         color: Colors.black,
@@ -154,36 +154,36 @@ class SignUpScreen extends StatelessWidget {
                           },
                         ),
                         const SizedBox(
-                          height: 50,
+                          height: 20,
                         ),
                         CheckWidget(),
                         const SizedBox(
-                          height: 50,
+                          height: 20,
                         ),
                         GetBuilder<AuthController>(
                           builder: (_) {
                             return AuthButton(
                               onPressed: () {
-                                // if (controller.isCheckBox == false) {
-                                //   Get.snackbar(
-                                //     "Check Box",
-                                //     "Please, Accept terms & conditions",
-                                //     snackPosition: SnackPosition.BOTTOM,
-                                //     backgroundColor: Colors.green,
-                                //     colorText: Colors.white,
-                                //   );
-                                // } else if (fromKey.currentState!.validate()) {
-                                //   String name = nameController.text.trim();
-                                //   String email = emailController.text.trim();
-                                //   String password = passwordController.text;
-                                //   // controller.signUpUsingFirebase(
-                                //   //   name: name,
-                                //   //   email: email,
-                                //   //   password: password,
-                                //   // );
+                                if (controller.isCheckBox == false) {
+                                  Get.snackbar(
+                                    "Check Box",
+                                    "Please, Accept terms & conditions",
+                                    snackPosition: SnackPosition.BOTTOM,
+                                    backgroundColor: Colors.green,
+                                    colorText: Colors.white,
+                                  );
+                                } else if (fromKey.currentState!.validate()) {
+                                  String name = nameController.text.trim();
+                                  String email = emailController.text.trim();
+                                  String password = passwordController.text;
+                                  controller.signUpUsingFirebase(
+                                    name: name,
+                                    email: email,
+                                    password: password,
+                                  );
 
-                                //   controller.isCheckBox = true;
-                                // }
+                                  controller.isCheckBox = true as RxBool;
+                                }
                               },
                               text: "SIGN UP",
                             );

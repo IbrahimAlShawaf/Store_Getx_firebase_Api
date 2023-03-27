@@ -97,7 +97,7 @@ class LoginScreen extends StatelessWidget {
                             return AuthTextFromField(
                               controller: passwordController,
                               obscureText:
-                                  controller.isVisibilty ? false : true,
+                                  controller.isVisibilty.value ? false : true,
                               validator: (value) {
                                 if (value.toString().length < 6) {
                                   return 'Password should be longer or equal to 6 characters';
@@ -117,7 +117,7 @@ class LoginScreen extends StatelessWidget {
                                 onPressed: () {
                                   controller.visibility();
                                 },
-                                icon: controller.isVisibilty
+                                icon: controller.isVisibilty.value
                                     ? const Icon(
                                         Icons.visibility_off,
                                         color: Colors.black,
@@ -156,8 +156,8 @@ class LoginScreen extends StatelessWidget {
                                 String email = emailController.text.trim();
                                 String password = passwordController.text;
 
-                                // controller.logInUsingFirebase(
-                                //     email: email, password: password);
+                                controller.logInUsingFirebase(
+                                    email: email, password: password);
                               }
                             },
                             text: "LOG IN",
@@ -179,21 +179,21 @@ class LoginScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            InkWell(
-                              onTap: () {
-                                // controller.faceBookSignUpApp();
-                              },
-                              child: Image.asset(
-                                "assets/images/facebook.png",
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
+                            // InkWell(
+                            //   onTap: () {
+                            //     // controller.faceBookSignUpApp();
+                            //   },
+                            //   child: Image.asset(
+                            //     "assets/images/facebook.png",
+                            //   ),
+                            // ),
+                            // const SizedBox(
+                            //   width: 10,
+                            // ),
                             GetBuilder<AuthController>(builder: (_) {
                               return InkWell(
                                 onTap: () {
-                                  //   controller.googleSinUpApp();
+                                  controller.googleSinUpApp();
                                 },
                                 child: Image.asset(
                                   "assets/images/google.png",

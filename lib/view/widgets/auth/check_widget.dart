@@ -12,7 +12,7 @@ class CheckWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder(builder: (_) {
+    return GetBuilder<AuthController>(builder: (_) {
       return Row(
         children: [
           InkWell(
@@ -26,7 +26,7 @@ class CheckWidget extends StatelessWidget {
                 color: Colors.grey.shade200,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: controller.isCheckBox
+              child: controller.isCheckBox.value
                   ? Get.isDarkMode
                       ? const Icon(
                           Icons.done,

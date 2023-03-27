@@ -3,7 +3,7 @@ String validationEmail =
 
 String validationName = r'^[a-z A-Z]+$';
 
-String baseUrl = 'https://fakestoreapi.com';
+//static const String baseUrl = 'https://fakestoreapi.com/';
 
 String arabic = 'Arabic 🇸🇦';
 String english = 'English 🇬🇧';

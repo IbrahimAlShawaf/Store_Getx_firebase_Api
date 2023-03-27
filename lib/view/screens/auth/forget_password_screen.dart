@@ -8,10 +8,9 @@ import '../../widgets/auth/auth_button.dart';
 import '../../widgets/auth/auth_text_from_field.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
-   ForgetPasswordScreen({super.key});
+  ForgetPasswordScreen({super.key});
 
-
-final formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
 
   final controller = Get.find<AuthController>();
@@ -55,7 +54,7 @@ final formKey = GlobalKey<FormState>();
                       },
                       icon: const Icon(
                         Icons.close_rounded,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -107,7 +106,7 @@ final formKey = GlobalKey<FormState>();
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
                           String email = emailController.text.trim();
-                          //controller.resetPassword(email);
+                          controller.resetPassword(email);
                         }
                       },
                       text: "SEND",

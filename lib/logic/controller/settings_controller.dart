@@ -3,9 +3,9 @@ import 'package:get_storage/get_storage.dart';
 import 'package:storefinal_app/utils/my_string.dart';
 
 class SettingController extends GetxController {
-   RxBool swithchValue = false.obs;
+  RxBool swithchValue = false.obs;
   var storage = GetStorage();
-  var langLocal = ene;
+   var langLocal = ene;
 
   String capitalize(String profileName) {
     return profileName.split(" ").map((name) => name.capitalize).join(" ");
@@ -17,14 +17,14 @@ class SettingController extends GetxController {
   void onInit() async {
     super.onInit();
 
-    langLocal = await getLanguage;
+    var langLocal = await getLanguage;
   }
 
   void saveLanguage(String lang) async {
     await storage.write("lang", lang);
   }
 
-  Future<String> get getLanguage async {
+  Future<dynamic> get getLanguage async {
     return await storage.read("lang");
   }
 
@@ -34,10 +34,7 @@ class SettingController extends GetxController {
       return;
     }
 
-    if (typeLang == frf) {
-      langLocal = frf;
-      saveLanguage(frf);
-    } else if (typeLang == ara) {
+    if (typeLang == ara) {
       langLocal = ara;
       saveLanguage(ara);
     } else {
@@ -46,4 +43,4 @@ class SettingController extends GetxController {
     }
     update();
   }
- }
+}

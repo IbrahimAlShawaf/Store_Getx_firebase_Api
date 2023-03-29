@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:storefinal_app/routes/routes.dart';
 
 import '../../../logic/controller/cart_controller.dart';
 import '../../../utils/theme.dart';
@@ -20,7 +21,7 @@ class CartTotal extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextUtils(
+                const TextUtils(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   text: "Total",
@@ -53,7 +54,7 @@ class CartTotal extends StatelessWidget {
                     primary: Get.isDarkMode ? pinkClr : mainColor,
                   ),
                   onPressed: () {
-                   // Get.toNamed(Routes.paymentScreen);
+                    Get.toNamed(Routes.paymentscreen);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

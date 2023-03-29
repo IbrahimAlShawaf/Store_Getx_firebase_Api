@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:storefinal_app/logic/binding/auth_biniding.dart';
 import 'package:storefinal_app/logic/binding/product_binding.dart';
 import 'package:storefinal_app/view/screens/main_screen.dart';
+import 'package:storefinal_app/view/screens/payment_screen.dart';
 import 'package:storefinal_app/view/screens/splash_screen.dart';
 
 import '../logic/binding/main_binding.dart';
@@ -62,15 +63,15 @@ class AppRoutes {
         MainBininding(),
       ],
     ),
-    // GetPage(
-    //   name: Routes.paymentscreen,
-    //   page: () => PayMentScreen(),
-    //   bindings: [
-    //     AuthBinding(),
-    //     ProductBinding(),
-    //     MainBininding(),
-    //   ],
-    // ),
+    GetPage(
+      name: Routes.paymentscreen,
+      page: () => PayMentScreen(),
+      bindings: [
+        AuthBinding(),
+        ProductBinding(),
+        MainBininding(),
+      ],
+    ),
   ];
 }
 
@@ -83,5 +84,5 @@ class Routes {
   static const mainscreen = '/mainscreen';
   static const cartscreen = '/cartscreen';
   static const splashscreen = '/splashscreen';
-  //static const paymentscreen = '/paymentscreen';
+  static const paymentscreen = '/paymentscreen';
 }

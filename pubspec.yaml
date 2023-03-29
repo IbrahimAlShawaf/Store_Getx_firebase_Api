@@ -50,9 +50,9 @@ dependencies:
   flutter_rating_bar: ^4.0.1 
   # flutter_simple_rating_bar: 
   readmore: 
-  # geolocator: 
-  # geocoding: 
-  # pay: 
+  geolocator: 
+  geocoding: 
+  pay: 
 
 dev_dependencies:
   flutter_test:

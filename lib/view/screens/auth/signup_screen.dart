@@ -48,7 +48,7 @@ class SignUpScreen extends StatelessWidget {
                             TextUtils(
                               fontSize: 28,
                               fontWeight: FontWeight.w500,
-                              text: "SIGN",
+                              text: "SIGN".tr,
                               color: Get.isDarkMode ? pinkClr : mainColor,
                               underLine: TextDecoration.none,
                             ),
@@ -58,7 +58,7 @@ class SignUpScreen extends StatelessWidget {
                             TextUtils(
                               fontSize: 28,
                               fontWeight: FontWeight.w500,
-                              text: "UP",
+                              text: "UP".tr,
                               color:
                                   Get.isDarkMode ? Colors.white : Colors.black,
                               underLine: TextDecoration.none,
@@ -74,7 +74,7 @@ class SignUpScreen extends StatelessWidget {
                           validator: (value) {
                             if (value.toString().length <= 2 ||
                                 !RegExp(validationName).hasMatch(value)) {
-                              return 'Enter valid name';
+                              return 'Enter valid name'.tr;
                             } else {
                               return null;
                             }
@@ -87,7 +87,7 @@ class SignUpScreen extends StatelessWidget {
                                 )
                               : Image.asset('assets/images/user.png'),
                           suffixIcon: const Text(""),
-                          hintText: 'User Name',
+                          hintText: 'User Name'.tr,
                         ),
                         const SizedBox(
                           height: 20,
@@ -97,7 +97,7 @@ class SignUpScreen extends StatelessWidget {
                           obscureText: false,
                           validator: (value) {
                             if (!RegExp(validationEmail).hasMatch(value)) {
-                              return 'Invalid email';
+                              return 'Invalid email'.tr;
                             } else {
                               return null;
                             }
@@ -110,7 +110,7 @@ class SignUpScreen extends StatelessWidget {
                                 )
                               : Image.asset('assets/images/email.png'),
                           suffixIcon: const Text(""),
-                          hintText: 'Email',
+                          hintText: 'Email'.tr,
                         ),
                         const SizedBox(
                           height: 20,
@@ -123,7 +123,7 @@ class SignUpScreen extends StatelessWidget {
                                   controller.isVisibilty.value ? false : true,
                               validator: (value) {
                                 if (value.toString().length < 6) {
-                                  return 'Password should be longer or equal to 6 characters';
+                                  return 'Password should be longer or equal to 6 characters'.tr;
                                 } else {
                                   return null;
                                 }
@@ -135,7 +135,7 @@ class SignUpScreen extends StatelessWidget {
                                       size: 30,
                                     )
                                   : Image.asset('assets/images/lock.png'),
-                              hintText: 'Password',
+                              hintText: 'Password'.tr,
                               suffixIcon: IconButton(
                                 onPressed: () {
                                   controller.visibility();
@@ -166,8 +166,8 @@ class SignUpScreen extends StatelessWidget {
                               onPressed: () {
                                 if (controller.isCheckBox == false) {
                                   Get.snackbar(
-                                    "Check Box",
-                                    "Please, Accept terms & conditions",
+                                    "Check Box".tr,
+                                    "Please, Accept terms & conditions".tr,
                                     snackPosition: SnackPosition.BOTTOM,
                                     backgroundColor: Colors.green,
                                     colorText: Colors.white,
@@ -182,10 +182,10 @@ class SignUpScreen extends StatelessWidget {
                                     password: password,
                                   );
 
-                                  controller.isCheckBox = true as RxBool;
+                                  controller.isCheckBox.value = true;
                                 }
                               },
-                              text: "SIGN UP",
+                              text: "SIGN UP".tr,
                             );
                           },
                         )
@@ -195,8 +195,8 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
               ContainerUnder(
-                text: 'Already have an Account? ',
-                textType: "Log in",
+                text: 'Already have an Account? '.tr,
+                textType: "Log in".tr,
                 onPressed: () {
                   Get.offNamed(Routes.loginscreen);
                 },

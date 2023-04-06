@@ -31,20 +31,20 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const TextUtils(
-                      fontSize: 25,
+                    TextUtils(
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
-                      text: "Find Your",
+                      text: "Find Your".tr,
                       color: Colors.white,
                       underLine: TextDecoration.none,
                     ),
                     const SizedBox(
                       height: 5,
                     ),
-                    const TextUtils(
-                      fontSize: 28,
+                    TextUtils(
+                      fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      text: "INSPIRATION",
+                      text: "INSPIRATION".tr,
                       color: Colors.white,
                       underLine: TextDecoration.none,
                     ),
@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                 child: TextUtils(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
-                  text: "Categories",
+                  text: "Categories".tr,
                   color: Get.isDarkMode ? Colors.white : Colors.black,
                   underLine: TextDecoration.none,
                 ),

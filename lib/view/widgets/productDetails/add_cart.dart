@@ -27,7 +27,7 @@ class AddCart extends StatelessWidget {
               TextUtils(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                text: "Price",
+                text: "Price".tr,
                 color: Colors.grey,
                 underLine: TextDecoration.none,
               ),
@@ -61,18 +61,18 @@ class AddCart extends StatelessWidget {
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children:  [
                     Text(
-                      "Add to Cart",
-                      style: TextStyle(
+                      "Add to Cart".tr,
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
-                    Icon(
+                    const Icon(
                       Icons.shopping_cart_outlined,
                     ),
                   ],

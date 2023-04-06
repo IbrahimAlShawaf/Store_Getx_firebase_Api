@@ -67,7 +67,7 @@ class MainScreen extends StatelessWidget {
                     Icons.home,
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
-                  label: 'Home',
+                  label: 'Home'.tr,
                 ),
                 BottomNavigationBarItem(
                   activeIcon: Icon(
@@ -78,7 +78,7 @@ class MainScreen extends StatelessWidget {
                     Icons.category,
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
-                  label: 'Category',
+                  label: 'Category'.tr,
                 ),
                 BottomNavigationBarItem(
                   activeIcon: Icon(
@@ -89,7 +89,7 @@ class MainScreen extends StatelessWidget {
                     Icons.favorite,
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
-                  label: 'Favorite',
+                  label: 'Favorite'.tr,
                 ),
                 BottomNavigationBarItem(
                   activeIcon: Icon(
@@ -100,7 +100,7 @@ class MainScreen extends StatelessWidget {
                     Icons.settings,
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
-                  label: 'Settings',
+                  label: 'Settings'.tr,
                 ),
               ],
               onTap: (index) {

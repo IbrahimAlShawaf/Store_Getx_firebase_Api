@@ -105,8 +105,8 @@ class ClothesInfo extends StatelessWidget {
             trimLines: 3,
             textAlign: TextAlign.justify,
             trimMode: TrimMode.Line,
-            trimCollapsedText: " Show More ",
-            trimExpandedText: " Show Less ",
+            trimCollapsedText: " Show More ".tr,
+            trimExpandedText: " Show Less ".tr,
             lessStyle: TextStyle(
               fontWeight: FontWeight.bold,
               color: Get.isDarkMode ? pinkClr : mainColor,

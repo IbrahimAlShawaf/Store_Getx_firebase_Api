@@ -18,7 +18,7 @@ class WelcomeScreen extends StatelessWidget {
               width: double.infinity,
               height: double.infinity,
               child: Image.asset(
-                'assets/images/background.png',
+                'assets/images/aqsa.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -39,11 +39,11 @@ class WelcomeScreen extends StatelessWidget {
                       color: Colors.black.withOpacity(0.3),
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: const Center(
+                    child:  Center(
                       child: TextUtils(
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
-                        text: 'Welcome',
+                        text: 'Welcome'.tr,
                         color: Colors.white,
                         underLine: TextDecoration.none,
                       ),
@@ -61,21 +61,21 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children:  [
                         TextUtils(
                           fontSize: 35,
                           fontWeight: FontWeight.bold,
-                          text: "Store",
+                          text: "Store".tr,
                           color: mainColor,
                           underLine: TextDecoration.none,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 7,
                         ),
                         TextUtils(
                           fontSize: 35,
                           fontWeight: FontWeight.bold,
-                          text: "App",
+                          text: "App".tr,
                           color: Colors.white,
                           underLine: TextDecoration.none,
                         ),
@@ -99,10 +99,10 @@ class WelcomeScreen extends StatelessWidget {
                     onPressed: () {
                       Get.offNamed(Routes.loginscreen);
                     },
-                    child: const TextUtils(
+                    child:  TextUtils(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
-                      text: 'Get Start',
+                      text: 'Get Start'.tr,
                       color: Colors.white,
                       underLine: TextDecoration.none,
                     ),
@@ -113,10 +113,10 @@ class WelcomeScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const TextUtils(
+                       TextUtils(
                         fontSize: 18,
                         fontWeight: FontWeight.normal,
-                        text: "Don't have an Account?",
+                        text: "Don't have an Account?".tr,
                         color: Colors.white,
                         underLine: TextDecoration.none,
                       ),
@@ -124,8 +124,8 @@ class WelcomeScreen extends StatelessWidget {
                         onPressed: () {
                           Get.offNamed(Routes.signupscreen);
                         },
-                        child: const TextUtils(
-                          text: 'Sign Up',
+                        child:  TextUtils(
+                          text: 'Sign Up'.tr,
                           color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.normal,

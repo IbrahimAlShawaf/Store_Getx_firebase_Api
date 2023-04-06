@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                             TextUtils(
                               fontSize: 28,
                               fontWeight: FontWeight.w500,
-                              text: "LOG",
+                              text: "LOG".tr,
                               color: Get.isDarkMode ? pinkClr : mainColor,
                               underLine: TextDecoration.none,
                             ),
@@ -56,7 +56,7 @@ class LoginScreen extends StatelessWidget {
                             TextUtils(
                               fontSize: 28,
                               fontWeight: FontWeight.w500,
-                              text: "IN",
+                              text: "IN".tr,
                               color:
                                   Get.isDarkMode ? Colors.white : Colors.black,
                               underLine: TextDecoration.none,
@@ -74,7 +74,7 @@ class LoginScreen extends StatelessWidget {
                           obscureText: false,
                           validator: (value) {
                             if (!RegExp(validationEmail).hasMatch(value)) {
-                              return 'Invalid email';
+                              return 'Invalid email'.tr;
                             } else {
                               return null;
                             }
@@ -87,7 +87,7 @@ class LoginScreen extends StatelessWidget {
                                 )
                               : Image.asset('assets/images/email.png'),
                           suffixIcon: const Text(""),
-                          hintText: 'Email',
+                          hintText: 'Email'.tr,
                         ),
                         const SizedBox(
                           height: 20,
@@ -100,7 +100,7 @@ class LoginScreen extends StatelessWidget {
                                   controller.isVisibilty.value ? false : true,
                               validator: (value) {
                                 if (value.toString().length < 6) {
-                                  return 'Password should be longer or equal to 6 characters';
+                                  return 'Password should be longer or equal to 6 characters'.tr;
                                 } else {
                                   return null;
                                 }
@@ -112,7 +112,7 @@ class LoginScreen extends StatelessWidget {
                                       size: 30,
                                     )
                                   : Image.asset('assets/images/lock.png'),
-                              hintText: 'Password',
+                              hintText: 'Password'.tr,
                               suffixIcon: IconButton(
                                 onPressed: () {
                                   controller.visibility();
@@ -137,7 +137,7 @@ class LoginScreen extends StatelessWidget {
                               Get.toNamed(Routes.forgotpasswordscreen);
                             },
                             child: TextUtils(
-                              text: 'Forgot Password?',
+                              text: 'Forgot Password?'.tr,
                               fontSize: 14,
                               color:
                                   Get.isDarkMode ? Colors.white : Colors.black,
@@ -160,56 +160,56 @@ class LoginScreen extends StatelessWidget {
                                     email: email, password: password);
                               }
                             },
-                            text: "LOG IN",
+                            text: "LOG IN".tr,
                           );
                         }),
                         const SizedBox(
                           height: 20,
                         ),
-                        TextUtils(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          text: "OR",
-                          color: Get.isDarkMode ? Colors.white : Colors.black,
-                          underLine: TextDecoration.none,
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            // InkWell(
-                            //   onTap: () {
-                            //     // controller.faceBookSignUpApp();
-                            //   },
-                            //   child: Image.asset(
-                            //     "assets/images/facebook.png",
-                            //   ),
-                            // ),
-                            // const SizedBox(
-                            //   width: 10,
-                            // ),
-                            GetBuilder<AuthController>(builder: (_) {
-                              return InkWell(
-                                onTap: () {
-                                  controller.googleSinUpApp();
-                                },
-                                child: Image.asset(
-                                  "assets/images/google.png",
-                                ),
-                              );
-                            }),
-                          ],
-                        ),
+                        // TextUtils(
+                        //   fontSize: 18,
+                        //   fontWeight: FontWeight.w500,
+                        //   text: "OR",
+                        //   color: Get.isDarkMode ? Colors.white : Colors.black,
+                        //   underLine: TextDecoration.none,
+                        // ),
+                        // const SizedBox(
+                        //   height: 20,
+                        // ),
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.center,
+                        //   children: [
+                        //     // InkWell(
+                        //     //   onTap: () {
+                        //     //     // controller.faceBookSignUpApp();
+                        //     //   },
+                        //     //   child: Image.asset(
+                        //     //     "assets/images/facebook.png",
+                        //     //   ),
+                        //     // ),
+                        //     // const SizedBox(
+                        //     //   width: 10,
+                        //     // ),
+                        //     GetBuilder<AuthController>(builder: (_) {
+                        //       return InkWell(
+                        //         onTap: () {
+                        //           controller.googleSinUpApp();
+                        //         },
+                        //         child: Image.asset(
+                        //           "assets/images/google.png",
+                        //         ),
+                        //       );
+                        //     }),
+                        //   ],
+                        // ),
                       ],
                     ),
                   ),
                 ),
               ),
               ContainerUnder(
-                text: "Don't have an Account? ",
-                textType: "Sign up",
+                text: "Don't have an Account? ".tr,
+                textType: "Sign up".tr,
                 onPressed: () {
                   Get.offNamed(Routes.signupscreen);
                 },

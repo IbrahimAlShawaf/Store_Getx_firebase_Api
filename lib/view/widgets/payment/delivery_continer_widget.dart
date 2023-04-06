@@ -48,13 +48,13 @@ class _DeliveryContinerWidgetState extends State<DeliveryContinerWidget> {
             address: controller.address.value,
             name: authController.displayUserName.value,
             phone: controller.phoneNumber.value,
-            title: "Delivery",
+            title: "Delivery".tr,
             value: 2,
             color: changeColors ? Colors.grey.shade300 : Colors.white,
             icon: InkWell(
               onTap: () {
                 Get.defaultDialog(
-                  title: "Enter Your Phone Number",
+                  title: "Enter Your Phone Number".tr,
                   titleStyle: const TextStyle(
                     fontSize: 16,
                     color: Colors.black,
@@ -62,9 +62,9 @@ class _DeliveryContinerWidgetState extends State<DeliveryContinerWidget> {
                   ),
                   backgroundColor: Colors.white,
                   radius: 10,
-                  textCancel: " Cancel ",
+                  textCancel: " Cancel ".tr,
                   confirmTextColor: Colors.black,
-                  textConfirm: " Save ",
+                  textConfirm: " Save ".tr,
                   cancelTextColor: Colors.black,
                   onCancel: () {
                     Get.toNamed(Routes.paymentscreen);
@@ -99,7 +99,7 @@ class _DeliveryContinerWidgetState extends State<DeliveryContinerWidget> {
                           },
                           icon: const Icon(Icons.close, color: Colors.black),
                         ),
-                        hintText: "Enter Your Phone Number",
+                        hintText: "Enter Your Phone Number".tr,
                         hintStyle: const TextStyle(
                           color: Colors.black45,
                           fontSize: 12,

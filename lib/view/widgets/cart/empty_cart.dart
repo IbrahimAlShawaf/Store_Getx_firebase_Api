@@ -25,7 +25,7 @@ class EmptyCart extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: "Your Cart is ",
+                  text: "Your Cart is ".tr,
                   style: TextStyle(
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                     fontSize: 30,
@@ -33,7 +33,7 @@ class EmptyCart extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: "Empty",
+                  text: "Empty".tr,
                   style: TextStyle(
                     color: Get.isDarkMode ? pinkClr : mainColor,
                     fontSize: 30,
@@ -47,7 +47,7 @@ class EmptyCart extends StatelessWidget {
             height: 10,
           ),
           Text(
-            "Add items to get Started",
+            "Add items to get Started".tr,
             style: TextStyle(
               color: Get.isDarkMode ? Colors.white : Colors.black,
               fontSize: 15,
@@ -70,9 +70,9 @@ class EmptyCart extends StatelessWidget {
               onPressed: () {
                 Get.toNamed(Routes.mainscreen);
               },
-              child: const Text(
-                'Go to Home',
-                style: TextStyle(
+              child:  Text(
+                'Go to Home'.tr,
+                style: const TextStyle(
                   fontSize: 20,
                   color: Colors.white,
                 ),

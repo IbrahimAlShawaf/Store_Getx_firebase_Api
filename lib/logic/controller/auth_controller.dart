@@ -13,7 +13,7 @@ class AuthController extends GetxController {
   RxString displayUserPhoto = ''.obs;
   RxString displayUserEmail = ''.obs;
   FirebaseAuth auth = FirebaseAuth.instance;
-  var googleSignIn = GoogleSignIn();
+  GoogleSignIn googleSignIn = GoogleSignIn();
   // FaceBookModel? faceBookModel;
 
   RxBool isSignedIn = false.obs;
@@ -25,8 +25,8 @@ class AuthController extends GetxController {
 
   @override
   void onInit() {
-    displayUserName.value =
-        (userProfiloe != null ? userProfiloe!.displayName : "")!;
+    // displayUserName.value =
+    //     (userProfiloe != null ? userProfiloe!.displayName : "")!;
     // displayUserPhoto.value =
     //     (userProfiloe != null ? userProfiloe!.photoURL : "")!;
     // displayUserEmail.value = (userProfiloe != null ? userProfiloe!.email : "")!;
@@ -111,10 +111,10 @@ class AuthController extends GetxController {
               displayUserName.value = auth.currentUser!.displayName!);
 
       isSignedIn.value = true;
-      authBox.write("auth", isSignedIn);
-
-      update();
+      GetStorage().write("auth", isSignedIn.value);
+      // authBox.write("auth", isSignedIn);
       Get.offNamed(Routes.mainscreen);
+      // update();
     } on FirebaseAuthException catch (error) {
       String title = error.code.replaceAll(RegExp('-'), ' ').capitalize!;
       String message = '';
@@ -147,7 +147,7 @@ class AuthController extends GetxController {
 
 // Sign In With Google Method ::::::::::::::::::::::::::::::::::
 
-  void googleSinUpApp() async {
+  Future<void> googleSinUpApp() async {
     try {
       final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
       displayUserName.value = googleUser!.displayName!;

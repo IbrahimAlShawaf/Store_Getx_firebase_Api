@@ -22,7 +22,7 @@ class CategoryScreen extends StatelessWidget {
                   color: Get.isDarkMode ? Colors.white : Colors.black,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  text: "Category",
+                  text: "Category".tr,
                   underLine: TextDecoration.none,
                 ),
               ),

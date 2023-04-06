@@ -44,14 +44,14 @@ class CheckWidget extends StatelessWidget {
               TextUtils(
                 fontSize: 16,
                 fontWeight: FontWeight.normal,
-                text: "I accept ",
+                text: "I accept ".tr,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
                 underLine: TextDecoration.none,
               ),
               TextUtils(
                 fontSize: 16,
                 fontWeight: FontWeight.normal,
-                text: "terms & conditions",
+                text: "terms & conditions".tr,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
                 underLine: TextDecoration.underline,
               ),

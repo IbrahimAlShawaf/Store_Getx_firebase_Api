@@ -17,13 +17,13 @@ class LogOutWidget extends StatelessWidget {
         child: InkWell(
           onTap: () {
             Get.defaultDialog(
-              title: "Logout From App",
+              title: "Logout From App".tr,
               titleStyle: const TextStyle(
                 fontSize: 18,
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
-              middleText: 'Are you sure you need to logout',
+              middleText: 'Are you sure you need to logout'.tr,
               middleTextStyle: const TextStyle(
                 fontSize: 18,
                 color: Colors.black,
@@ -31,9 +31,9 @@ class LogOutWidget extends StatelessWidget {
               ),
               backgroundColor: Colors.grey,
               radius: 10,
-              textCancel: " No ",
+              textCancel: " No ".tr,
               cancelTextColor: Colors.white,
-              textConfirm: " YES ",
+              textConfirm: " YES ".tr,
               confirmTextColor: Colors.white,
               onCancel: () {
                 Get.back();

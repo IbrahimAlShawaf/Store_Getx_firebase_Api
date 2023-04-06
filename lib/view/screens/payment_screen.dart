@@ -18,7 +18,7 @@ class PayMentScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: context.theme.scaffoldBackgroundColor,
       appBar: AppBar(
-        title: const Text("PayMent"),
+        title:  Text("PayMent".tr),
         elevation: 0,
         backgroundColor: Get.isDarkMode ? darkGreyClr : mainColor,
         centerTitle: true,
@@ -32,7 +32,7 @@ class PayMentScreen extends StatelessWidget {
               TextUtils(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                text: "Shipping to",
+                text: "Shipping to".tr,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
                 underLine: TextDecoration.none,
               ),
@@ -46,7 +46,7 @@ class PayMentScreen extends StatelessWidget {
               TextUtils(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                text: "Payment method",
+                text: "Payment method".tr,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
                 underLine: TextDecoration.none,
               ),
@@ -61,7 +61,7 @@ class PayMentScreen extends StatelessWidget {
                 child: TextUtils(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  text: "Total: ${cartController.total}\$",
+                  text: "Total: ${cartController.total}\$".tr,
                   color: Get.isDarkMode ? Colors.white : Colors.black,
                   underLine: TextDecoration.none,
                 ),
@@ -82,9 +82,9 @@ class PayMentScreen extends StatelessWidget {
                       primary: Get.isDarkMode ? pinkClr : mainColor,
                     ),
                     onPressed: () {},
-                    child: const Text(
-                      "Pay Now",
-                      style: TextStyle(
+                    child:  Text(
+                      "Pay Now".tr,
+                      style: const TextStyle(
                         fontSize: 22,
                         color: Colors.white,
                       ),

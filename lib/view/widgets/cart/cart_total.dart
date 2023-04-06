@@ -21,10 +21,10 @@ class CartTotal extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const TextUtils(
+                 TextUtils(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  text: "Total",
+                  text: "Total".tr,
                   color: Colors.grey,
                   underLine: TextDecoration.none,
                 ),
@@ -58,18 +58,18 @@ class CartTotal extends StatelessWidget {
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children:  [
                       Text(
-                        "Check Out",
-                        style: TextStyle(
+                        "Check Out".tr,
+                        style: const TextStyle(
                           fontSize: 20,
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Icon(Icons.shopping_cart),
+                      const Icon(Icons.shopping_cart),
                     ],
                   ),
                 ),

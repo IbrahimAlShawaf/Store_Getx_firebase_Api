@@ -2,7 +2,7 @@
     package="com.example.storefinal_app">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="storefinal_app"
+        android:label="Store App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
